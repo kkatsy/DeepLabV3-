@@ -75,10 +75,6 @@ class DeepLabV3P(nn.Module):
         # upsample by 4
         self.upsample_decoder = Upsample(scale_factor=4) #, mode='bilinear')
 
-        # model = torch.nn.Sequential(*features)
-        # model.classifier = nn.Conv2d(32, n_class, kernel_size=1)
-        # self.model = model
-
     def forward(self, input):
         print("Initial: ", input.shape)
         # ENCODER
